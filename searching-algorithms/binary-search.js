@@ -1,5 +1,5 @@
 // Using divide and conquer approach, this is the classic binary search algorithm
-
+// only works on an ordened input list
 function binarySearch (array, value) {
   let start = array[0]
   let end = array.length - 1
