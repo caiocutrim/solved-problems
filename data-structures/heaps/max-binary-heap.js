@@ -25,6 +25,7 @@ class MaxBinaryHeap {
       lastIndex = parentIndex
     }
   }
+  
   extractMax() {
     const max = this.values[0]
     const end = this.values.pop()
