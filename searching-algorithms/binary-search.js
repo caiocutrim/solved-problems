@@ -1,4 +1,4 @@
-// Using divide and conquer technique, this is binary search algorithm
+// Using divide and conquer approach, this is the classic binary search algorithm
 
 function binarySearch (array, value) {
   let start = array[0]
