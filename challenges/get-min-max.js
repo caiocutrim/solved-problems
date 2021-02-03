@@ -8,7 +8,7 @@ function getMinMax(array) {
       max = array[i]
     }
   }
-  return [max, min]
+  return [min, max]
 }
 
 

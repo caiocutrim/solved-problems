@@ -125,6 +125,8 @@ class DoublyLinkedList {
     return removedNode
   }
 }
+
+
 const list = new DoublyLinkedList()
 list.push(1)
 list.push(2)
