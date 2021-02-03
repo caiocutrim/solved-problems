@@ -1,2 +1,2 @@
 # solved-problems
-Some common algorithm solutions and data-structures implementations for interview challenges
+Some common algorithms solutions and data-structures implementations for interview challenges
