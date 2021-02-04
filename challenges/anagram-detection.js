@@ -17,25 +17,8 @@ function isAnagram(test, original) {
     return false
   }
 
-  test = test.toLowerCase()
-  original = original.toLowerCase()
+  test = test.toLowerCase().split('').sort().join('')
+  original = original.toLowerCase().split('').sort().join('')
 
-  const str1ObjCounter = {}
-  const str2ObjCounter = {}
-
-  for (let chars of test) {
-    str1ObjCounter[chars] = (str1ObjCounter[chars] || 0) + 1
-  }
-
-  for (let chars of original) {
-    str2ObjCounter[chars] = (str2ObjCounter[chars] || 0) + 1
-  }
-
-  for (let key in str1ObjCounter) {
-    if (str1ObjCounter[key] === str2ObjCounter[key]) {
-      return true
-    } else {
-      return false
-    }
-  }
+  return test === original
 }
