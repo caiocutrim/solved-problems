@@ -1,8 +1,12 @@
 const assert = require('assert');
 
-assert.strictEqual(solution('camelCasing'), 'camel Casing', 'Unexpected result')
-assert.strictEqual(solution('camelCasingTest'), 'camel Casing Test', 'Unexpected result')
+assert.strictEqual(solution('camelCasing'), 'camel Casing')
+assert.strictEqual(solution('camelCasingTest'), 'camel Casing Test')
 
 function solution(string) {
-  return string.replace(/[A-Z]/g, c => ' '+c)
+  return addSpaceBeforeUpperCased(string)
+}
+
+function addSpaceBeforeUpperCased(string) {
+  return string.replace(/[A-Z]/g, c => ` ${c}`)
 }
