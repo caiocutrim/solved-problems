@@ -1,4 +1,3 @@
-// using frequency pattern problem to solve
 
 validAnagram('ana', 'ana')// true
 validAnagram('anagram', 'nagaram')// true
@@ -23,8 +22,6 @@ function validAnagram (str1, str2) {
   for (let chars of str2) {
     str2ObjCounter[chars] = (str2ObjCounter[chars] || 0) + 1
   }
-  console.log('obj 1', str1ObjConter)
-  console.log('obj 2', str2ObjCounter)
 
   for (let key in str1ObjCounter) {
     if (str1ObjCounter[key] === str2ObjCounter[key]) {
