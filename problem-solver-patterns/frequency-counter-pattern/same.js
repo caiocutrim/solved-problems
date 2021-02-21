@@ -12,8 +12,8 @@ function same(arr1, arr2) {
     return false
   }
 
-  const { frequencyCounterForArr1 } = getTotalOf(arr1)
-  const { frequencyCounterForArr2 } = getTotalOf(arr2)
+  const { frequencyCounterForArr1 } = getFrequencyOf(arr1)
+  const { frequencyCounterForArr2 } = getFrequencyOf(arr2)
 
   for(let key in frequencyCounterForArr1) {
     if (!(key ** 2 in frequencyCounterForArr2)) {
@@ -28,7 +28,7 @@ function same(arr1, arr2) {
   return true
 }
 
-function getTotalOf(arr) {
+function getFrequencyOf(arr) {
   const objectCounter = {}
   for (let val of arr) {
     objectCounter[val] = (objectCounter[val] || 0) + 1

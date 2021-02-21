@@ -13,8 +13,8 @@ function sameFrequency(num1, num2) {
     return false
   }
 
-  const { counterNumStr1 } = getTotalOf(numstr1)
-  const { counterNumStr2 } = getTotalOf(numstr2)
+  const { counterNumStr1 } = getFrequencyOf(numstr1)
+  const { counterNumStr2 } = getFrequencyOf(numstr2)
 
   for (let key in counterNumStr1) {
     if (counterNumStr1[key] !== counterNumStr2[key]) {
@@ -25,7 +25,7 @@ function sameFrequency(num1, num2) {
   return true
 }
 
-function getTotalOf(str) {
+function getFrequencyOf(str) {
   const objectCounter = {}
   for (let val of str) {
     objectCounter[val] = (objectCounter[val] || 0) + 1
