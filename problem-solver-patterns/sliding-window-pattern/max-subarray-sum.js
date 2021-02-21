@@ -1,4 +1,3 @@
-// window sliding technique
 function maxSubarraySum(arr, num){
   let maxSum = 0;
   let tempSum = 0;
