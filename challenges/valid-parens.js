@@ -16,13 +16,9 @@ function isValidParens(parens) {
   for(let i = 0; i < parens.length; i++) {
     if(parens[i] === oppenend) {
       stack.push(parens[i])
-    } else if(!(parensObj[stack.pop()] === parens[i])) {
+    } else if(parensObj[stack.pop()] !== parens[i]) {
       return false
     } 
   }
   return stack.length === 0
 }
-
-
-
-
