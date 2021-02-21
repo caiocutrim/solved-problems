@@ -1,6 +1,7 @@
 // Using divide and conquer problem solver, this is the classic binary search algorithm
 // only works on an ordened input list
 function binarySearch (array, value) {
+  // returns the index of found element
   let start = array[0]
   let end = array.length - 1
   let middle = Math.floor((start + end) / 2)
