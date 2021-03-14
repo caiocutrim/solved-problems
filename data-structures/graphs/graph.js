@@ -6,8 +6,7 @@
 // usarei adjancent list pq aplicações reais de graphs tendem a ser sparser-graphs
 
 
-
-module.exports = class Graph {
+class Graph {
   constructor() {
     this.adjancencyList = {}
   }
@@ -22,7 +21,6 @@ module.exports = class Graph {
       this.adjancencyList[v1].push(v2)
     if(this.adjancencyList[v2])
       this.adjancencyList[v2].push(v1)
-    console.log(this.adjancencyList)
   }
 
   removeEdge(v1, v2) {
@@ -31,7 +29,6 @@ module.exports = class Graph {
     if(this.adjancencyList[v2])
       this.adjancencyList[v2] = this.adjancencyList[v2].filter(v => v !== v1)
 
-    console.log(this.adjancencyList)
   }
 
   removeVertex(vertex) {
@@ -41,4 +38,45 @@ module.exports = class Graph {
     }
     delete this.adjancencyList[vertex]
   }
+
+  deepthFirstSearchInterative(start) {
+    const stack = [start]
+    const result = []
+    const visited = {}
+    let currentVertex
+
+    visited[start] = true
+    while(stack.length) {
+    currentVertex = stack.pop()
+      console.log(stack)
+      result.push(currentVertex)
+
+      this.adjancencyList[currentVertex].forEach(neighbor => {
+        if(!visited[neighbor]) {
+          visited[neighbor] = true
+          stack.push(neighbor)
+        }
+      })
+    }
+    return result
+  }
 }
+
+const g = new Graph()
+
+g.addVertex('A')
+g.addVertex('B')
+g.addVertex('C')
+g.addVertex('D')
+g.addVertex('E')
+g.addVertex('F')
+g.addEdge('A', 'B')
+g.addEdge('A', 'C')
+g.addEdge('B', 'D')
+g.addEdge('C', 'E')
+g.addEdge('D', 'E')
+g.addEdge('D', 'F')
+g.addEdge('E', 'F')
+
+console.log(g.deepthFirstSearchInterative('A'))
+
