@@ -13,7 +13,7 @@ class PriorityQueue {
   }
 
   dequeue() {
-    this.values.shift()
+    return this.values.shift()
   }
 }
 
