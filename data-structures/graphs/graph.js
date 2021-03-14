@@ -47,7 +47,7 @@ class Graph {
 
     visited[start] = true
     while(stack.length) {
-    currentVertex = stack.pop()
+      currentVertex = stack.pop()
       console.log(stack)
       result.push(currentVertex)
 
@@ -55,6 +55,25 @@ class Graph {
         if(!visited[neighbor]) {
           visited[neighbor] = true
           stack.push(neighbor)
+        }
+      })
+    }
+    return result
+  }
+
+  breadthFirstSearch(start) {
+    const queue = [start]
+    const result = []
+    const visited = {}
+    let currentVertex
+    visited[start] = true
+    while(queue.length) {
+      currentVertex = queue.shift()
+      result.push(currentVertex)
+      this.adjancencyList[currentVertex].forEach(neighbor => {
+        if(!visited[neighbor]) {
+          visited[neighbor] = true
+          queue.push(neighbor)
         }
       })
     }
@@ -78,5 +97,5 @@ g.addEdge('D', 'E')
 g.addEdge('D', 'F')
 g.addEdge('E', 'F')
 
-console.log(g.deepthFirstSearchInterative('A'))
+console.log(g.breadthFirstSearch('A'))
 
