@@ -13,6 +13,6 @@ function maxSubarraySum(arr, num){
   return maxSum;
 }
 
-const array = [0, 1, 3, 9, 9, 9]
+const array = [0, 1, 3, 4, 5]
 const result = maxSubarraySum(array,2)
 console.log(result)

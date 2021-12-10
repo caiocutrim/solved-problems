@@ -1,5 +1,5 @@
 // Using divide and conquer problem solver, this is the classic binary search algorithm
-// only works on an ordened input list
+// only works on a sorted input list
 function binarySearch (array, value) {
   // returns the index of found element
   let start = array[0]
@@ -10,7 +10,7 @@ function binarySearch (array, value) {
     middle = Math.floor((start + end) / 2)
   }
 
-  return array[middle] === value ? middle + 1 : -1
+  return array[middle] === value ? middle : -1
 }
 
 console.log(binarySearch([0, 1, 2, 3], 3))

@@ -15,7 +15,7 @@
 // ([)] -> false
 // )( -> false
 // -> true
-function checkIfIsBalancedString(str) {
+function isStringBalanced(str) {
   const len = str.length
   const stack = []
   const opennings = ['{', '[', '(']
@@ -50,21 +50,22 @@ function isNotMatchingPair(stack, str) {
   }
   return !(pairs[top] === str)
 }
-console.log(checkIfIsBalancedString('')) // true
-console.log(checkIfIsBalancedString('{}')) // true
-console.log(checkIfIsBalancedString('()')) // true
-console.log(checkIfIsBalancedString('({)')) // false
-console.log(checkIfIsBalancedString('({{}})')) // true 
-console.log(checkIfIsBalancedString('({{})')) // false 
-console.log(checkIfIsBalancedString('(){}'))// true
-console.log(checkIfIsBalancedString('[(){}]')) // true
-console.log(checkIfIsBalancedString('(a[0]+b[2c[6]]) {24 + 53}')) // true
-console.log(checkIfIsBalancedString('f(e(d))')) // true
-console.log(checkIfIsBalancedString('((b)')) // false
-console.log(checkIfIsBalancedString('(c]')) // false
-console.log(checkIfIsBalancedString('(8]')) // false
-console.log(checkIfIsBalancedString('(]')) // false
-console.log(checkIfIsBalancedString('([')) // false
-console.log(checkIfIsBalancedString('({')) // false
-console.log(checkIfIsBalancedString('[(){}[')) // false
-console.log(checkIfIsBalancedString('()')) // true 
+
+console.log(isStringBalanced('')) // true
+console.log(isStringBalanced('{}')) // true
+console.log(isStringBalanced('()')) // true
+console.log(isStringBalanced('({)')) // false
+console.log(isStringBalanced('({{}})')) // true 
+console.log(isStringBalanced('({{})')) // false 
+console.log(isStringBalanced('(){}'))// true
+console.log(isStringBalanced('[(){}]')) // true
+console.log(isStringBalanced('(a[0]+b[2c[6]]) {24 + 53}')) // true
+console.log(isStringBalanced('f(e(d))')) // true
+console.log(isStringBalanced('((b)')) // false
+console.log(isStringBalanced('(c]')) // false
+console.log(isStringBalanced('(8]')) // false
+console.log(isStringBalanced('(]')) // false
+console.log(isStringBalanced('([')) // false
+console.log(isStringBalanced('({')) // false
+console.log(isStringBalanced('[(){}[')) // false
+console.log(isStringBalanced('()')) // true 

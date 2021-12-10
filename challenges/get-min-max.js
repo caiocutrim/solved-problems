@@ -11,5 +11,4 @@ function getMinMax(array) {
   return [min, max]
 }
 
-
-console.log(getMinMax([0, 5, 3, 2, 7, 10]))
+console.log(getMinMax([0, 5, 3, 2, 7, 30, 10]))

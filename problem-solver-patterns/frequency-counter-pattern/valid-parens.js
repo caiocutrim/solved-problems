@@ -1,7 +1,7 @@
 
 
-// write a function that validates if parens are opened-closed correcty
-// the function return a bollean
+// write a function that validates if parens are opened and closed correcty
+// the function return a boolean
 // ex
 // validParens('') // true
 // validParens('()') // true
