@@ -18,11 +18,10 @@
 function findIntersectionBetweenTwoArrays(arr1, arr2) {
   const result = []
   // to apply a binary-search, the elements should be sorted
-  const sortedArray = arr1.sort((a, b) => a - b)
   const array = arr2.sort((a,b) => a - b)
 
 
-  for(const value of sortedArray) {
+  for(const value of arr1) {
     let start = 0
     let end = array.length - 1
     while (start <= end) {
