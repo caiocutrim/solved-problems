@@ -9,7 +9,6 @@ function binarySearch (array, value) {
     value < array[middle] ? end = middle - 1 : start = middle + 1
     middle = Math.floor((start + end) / 2)
   }
-
   return array[middle] === value ? middle : -1
 }
 
